@@ -9,13 +9,19 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".view.KeyframeXmlActivity"/>
+        <activity android:name=".view.KeyframeProgrammaticallyActivity"/>
+        <activity android:name=".view.OrionProgramaticallyActivity"/>
+        <activity android:name=".view.SizesActivity"/>
+        <activity android:name=".view.RotationBiasActivity"/>
+        <activity android:name=".view.CircleFabActivity"/>
     </application>
 
 </manifest>

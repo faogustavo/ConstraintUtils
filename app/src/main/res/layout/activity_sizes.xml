@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <Button
+                android:text="Width"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/width"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/height"
+                app:layout_constraintEnd_toEndOf="@+id/height"
+                app:layout_constraintStart_toStartOf="@+id/height"
+        />
+        <Button
+                android:text="Height"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:id="@+id/height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/width"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintBottom_toTopOf="@+id/ratio"/>
+        <Button
+                android:text="Ratio"
+                android:layout_width="130dp"
+                android:layout_height="0dp"
+                android:id="@+id/ratio"
+                app:layout_constraintDimensionRatio="4:3"
+                app:layout_constraintEnd_toEndOf="@+id/height"
+                app:layout_constraintStart_toStartOf="@+id/height"
+                app:layout_constraintTop_toBottomOf="@+id/height"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintBottom_toTopOf="@+id/max_width"/>
+        <Button
+                android:text="A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/min_width"
+                app:layout_constraintEnd_toEndOf="@+id/height"
+                app:layout_constraintStart_toStartOf="@+id/height"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/max_width"
+                app:layout_constraintHorizontal_bias="0.5"/>
+        <Button
+                android:text="Super hyper mega long text to my button"
+                android:layout_width="345dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/max_width"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratio"
+                app:layout_constraintBottom_toTopOf="@+id/min_width"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
