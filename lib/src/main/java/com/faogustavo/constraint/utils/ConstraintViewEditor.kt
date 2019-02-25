@@ -9,7 +9,7 @@ class ConstraintViewEditor(private val set: ConstraintSet, val parent: Int, priv
         ALL, LEFT, RIGHT, TOP, BOTTOM
     }
 
-    fun unbind(side: Side) {
+    fun unbind(side: Side = Side.ALL) {
         when (side) {
             Side.ALL -> set.clear(viewId)
             Side.LEFT -> set.clear(viewId, ConstraintSet.LEFT)

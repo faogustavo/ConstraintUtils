@@ -1,8 +1,6 @@
 package com.faogustavo.constraint.utils
 
-import android.transition.ChangeBounds
-import android.transition.Transition
-import android.transition.TransitionManager
+import android.transition.*
 import android.view.View
 import android.view.animation.AnticipateOvershootInterpolator
 import android.view.animation.DecelerateInterpolator
@@ -13,8 +11,11 @@ import androidx.constraintlayout.widget.ConstraintSet
 class ConstraintEditor(private val layout: ConstraintLayout, private val set: ConstraintSet) {
 
     companion object {
-        private val DEFAULT_TRANSITION = ChangeBounds().apply {
-            interpolator = DecelerateInterpolator(1.0f)
+        private val DEFAULT_TRANSITION = TransitionSet().apply {
+            this.addTransition(Explode())
+            this.addTransition(ChangeBounds())
+            this.addTransition(ChangeTransform())
+            this.addTransition(ChangeClipBounds())
         }
     }
 
