@@ -1,11 +1,16 @@
-# Constraint Utils
+# Constraint Utils 
+
 An easier way to add, remove and edit constraints and another ConstraintLayout properties;
 
 ## Install
 Add this dependency from jCenter:
 ```gradle
-compile 'UPDATE`PACKAGE`N`VERSION`HERE'
+implementation "com.gustavofao:ConstraintUtils:$CONSTRAINT_UTILS_VERSION"
 ```
+
+Our latest version is:
+
+[![Download](https://api.bintray.com/packages/faogustavo/maven/ConstraintUtils/images/download.svg?version=1.0.0-rc1) ](https://bintray.com/faogustavo/maven/ConstraintUtils/1.0.0-rc1/link)
 
 ## Usage
 
